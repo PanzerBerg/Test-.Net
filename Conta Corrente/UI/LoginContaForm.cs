@@ -18,7 +18,7 @@ namespace Conta_Corrente
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void LoginContaForm_Load(object sender, EventArgs e)
         {
 
         }

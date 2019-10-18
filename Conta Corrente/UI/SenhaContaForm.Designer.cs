@@ -36,7 +36,6 @@
             this.nomeLabel = new System.Windows.Forms.Label();
             this.cpfLabel = new System.Windows.Forms.Label();
             this.contaLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -109,21 +108,11 @@
             this.contaLabel.TabIndex = 7;
             this.contaLabel.Text = "label6";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(217, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Insira a senha:";
-            // 
             // SenhaContaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 211);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(364, 441);
             this.Controls.Add(this.contaLabel);
             this.Controls.Add(this.cpfLabel);
             this.Controls.Add(this.nomeLabel);
@@ -150,6 +139,5 @@
         private System.Windows.Forms.Label nomeLabel;
         private System.Windows.Forms.Label cpfLabel;
         private System.Windows.Forms.Label contaLabel;
-        private System.Windows.Forms.Label label4;
     }
 }
