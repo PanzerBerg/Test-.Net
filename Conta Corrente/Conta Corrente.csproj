@@ -73,12 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContasDataSet.Designer.cs">
+    <Compile Include="entities\Db\ContasDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContasDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ContasDataSet1.Designer.cs">
+    <Compile Include="entities\Db\ContasDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContasDataSet1.xsd</DependentUpon>
@@ -115,7 +115,7 @@
     <Compile Include="UI\LoginContaForm.Designer.cs">
       <DependentUpon>LoginContaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\SenhaContaForm.cs">
       <SubType>Form</SubType>
@@ -150,30 +150,30 @@
     <EmbeddedResource Include="UI\TransferenciaForm.resx">
       <DependentUpon>TransferenciaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ContasDataSet.xsc">
+    <None Include="entities\Db\ContasDataSet.xsc">
       <DependentUpon>ContasDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ContasDataSet.xsd">
+    <None Include="entities\Db\ContasDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ContasDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ContasDataSet.xss">
+    <None Include="entities\Db\ContasDataSet.xss">
       <DependentUpon>ContasDataSet.xsd</DependentUpon>
     </None>
     <EntityDeploy Include="entities\Db\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ContasDataSet1.xsc">
+    <None Include="entities\Db\ContasDataSet1.xsc">
       <DependentUpon>ContasDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="ContasDataSet1.xsd">
+    <None Include="entities\Db\ContasDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ContasDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ContasDataSet1.xss">
+    <None Include="entities\Db\ContasDataSet1.xss">
       <DependentUpon>ContasDataSet1.xsd</DependentUpon>
     </None>
     <None Include="entities\Db\Model1.edmx.diagram">
@@ -206,10 +206,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contas.mdf">
+    <Content Include="entities\Db\Contas.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Contas_log.ldf">
+    <Content Include="entities\Db\Contas_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Contas.mdf</DependentUpon>
     </Content>

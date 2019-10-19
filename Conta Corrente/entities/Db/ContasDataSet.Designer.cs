@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Conta_Corrente {
+namespace Conta_Corrente.entities.Db {
     
     
     /// <summary>
@@ -1156,7 +1156,7 @@ namespace Conta_Corrente {
         }
     }
 }
-namespace Conta_Corrente.ContasDataSetTableAdapters {
+namespace Conta_Corrente.entities.Db.ContasDataSetTableAdapters {
     
     
     /// <summary>
