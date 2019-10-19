@@ -44,7 +44,7 @@ namespace Conta_Corrente
             {
                 if (c.Conta == int.Parse(contaTxtBox.Text) && c.Agencia == int.Parse(agenciaTxtBox.Text) && c.Digito == int.Parse(digitoTxtBox.Text))
                 {
-                    ContaController.RecebeDados(c.Id, c.Nome, c.Cpf, c.Saldo);
+                    ContaController.RecebeDados(c.Id, c.Nome, c.Cpf, c.Saldo, c.Saldo_Dolar);
                     ContaController.PassaDados(c.Conta, c.Agencia, c.Digito);
                     return true;
                 }

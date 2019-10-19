@@ -35,7 +35,7 @@ namespace Conta_Corrente.entities.Db
         public const string strInsert = "INSERT INTO Clientes VALUES (@nome, @cpf, @conta, @agencia, @digito, @saldo)";
         public const string strSelect = "SELECT id, nome, cpf, conta, agencia, digito, saldo, saldo_dolar FROM Clientes";
         public const string strSelectSenhas = "SELECT id, cpf, senha FROM Clientes_Senhas";
-        public const string strUpdate = "UPDATE Clientes SET nome = @nome, cpf = @cpf, conta = @conta, agencia = @agencia, digito = @digito, saldo = @saldo, id = @id";
+        public const string strUpdate = "UPDATE Clientes SET nome = @nome, cpf = @cpf, conta = @conta, agencia = @agencia, digito = @digito, saldo = @saldo WHERE id = @id";
 
         public List<Clientes_Senhas> ConsultarSenha()
         {
@@ -105,7 +105,7 @@ namespace Conta_Corrente.entities.Db
             return list;
         }
 
-        public void Atualizar(int id, string nome, string cpf, int conta, int agencia, int digito, float saldo)
+        public void Atualizar(int id, string nome, string cpf, int conta, int agencia, int digito, float saldo, float saldo_dolar)
         {
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
@@ -118,6 +118,7 @@ namespace Conta_Corrente.entities.Db
                     sqlCommand.Parameters.AddWithValue("@agencia", agencia);
                     sqlCommand.Parameters.AddWithValue("@digito", digito);
                     sqlCommand.Parameters.AddWithValue("@saldo", saldo);
+                    sqlCommand.Parameters.AddWithValue("@saldo_dolar", saldo_dolar);
 
                     sqlConnection.Open();
 

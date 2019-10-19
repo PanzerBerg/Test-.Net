@@ -35,12 +35,12 @@
             this.digitoTxtBoxTrans = new System.Windows.Forms.TextBox();
             this.agenciaTxtBoxTrans = new System.Windows.Forms.TextBox();
             this.contaTxtBoxTrans = new System.Windows.Forms.TextBox();
-            this.transTxtBox = new System.Windows.Forms.TextBox();
             this.transButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.saldoLabelTrans = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.transTxtBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // digitoLabel
@@ -104,13 +104,6 @@
             this.contaTxtBoxTrans.Size = new System.Drawing.Size(43, 20);
             this.contaTxtBoxTrans.TabIndex = 8;
             // 
-            // transTxtBox
-            // 
-            this.transTxtBox.Location = new System.Drawing.Point(228, 138);
-            this.transTxtBox.Name = "transTxtBox";
-            this.transTxtBox.Size = new System.Drawing.Size(124, 20);
-            this.transTxtBox.TabIndex = 15;
-            // 
             // transButton
             // 
             this.transButton.Location = new System.Drawing.Point(277, 164);
@@ -159,17 +152,24 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Insira a conta que deseja transferir:";
             // 
+            // transTxtBox
+            // 
+            this.transTxtBox.Location = new System.Drawing.Point(228, 138);
+            this.transTxtBox.Name = "transTxtBox";
+            this.transTxtBox.Size = new System.Drawing.Size(124, 20);
+            this.transTxtBox.TabIndex = 21;
+            // 
             // TransferenciaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 211);
+            this.Controls.Add(this.transTxtBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.saldoLabelTrans);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.transButton);
-            this.Controls.Add(this.transTxtBox);
             this.Controls.Add(this.digitoLabel);
             this.Controls.Add(this.agenciaLabel);
             this.Controls.Add(this.contaLabel);
@@ -194,11 +194,11 @@
         private System.Windows.Forms.TextBox digitoTxtBoxTrans;
         private System.Windows.Forms.TextBox agenciaTxtBoxTrans;
         private System.Windows.Forms.TextBox contaTxtBoxTrans;
-        private System.Windows.Forms.TextBox transTxtBox;
         private System.Windows.Forms.Button transButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label saldoLabelTrans;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox transTxtBox;
     }
 }

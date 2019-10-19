@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Documents;
 
 namespace Conta_Corrente.entities
 {
-    static class ContaController
+    static class TransferController
     {
         private static int Id { get; set; }
         private static int Conta { get; set; }
@@ -19,25 +18,36 @@ namespace Conta_Corrente.entities
         private static float Saldo { get; set; }
         private static float Saldo_Dolar { get; set; }
 
-        public static void RecebeDados(int _id, string _nome, string _cpf, float _saldo, float _dolar)
+        public static string GetNome()
+        {
+            return Nome;
+        }
+
+        public static void RecebeDados (int _id, int _conta, int _agencia, int _digito, string _nome, string _cpf, float _saldo, float _dolar)
         {
             Id = _id;
+            Conta = _conta;
+            Agencia = _agencia;
+            Digito = _digito;
             Nome = _nome;
             Cpf = _cpf;
             Saldo = _saldo;
             Saldo_Dolar = _dolar;
         }
 
-        public static void PassaDados(int _conta, int _agencia, int _digito)
+        public static float TransferFirst(float valor)
         {
-            Conta = _conta;
-            Agencia = _agencia;
-            Digito = _digito;
+            float saldoAtualizado = ContaController.GetSaldo() - valor;
+            ContaController.SaldoAtualizado(saldoAtualizado);
+            TransferSecond(valor);
+            return saldoAtualizado;
         }
 
-        public static void SaldoAtualizado(float _saldo)
+        public static float TransferSecond(float valor)
         {
-            Saldo = _saldo;
+            float saldoAtualizado = Saldo + valor;
+            Saldo = saldoAtualizado;
+            return saldoAtualizado;
         }
 
         public static void AtualizarDb(DbController dbController)
@@ -48,38 +58,6 @@ namespace Conta_Corrente.entities
         public static string ContaString()
         {
             return Conta + " " + Agencia + " - " + Digito;
-        }
-
-        public static string NomeString()
-        {
-            return Nome;
-        }
-
-        public static string CpfString()
-        {
-            return Cpf;
-        }
-
-        public static float GetSaldo()
-        {
-            return Saldo;
-        }
-        
-        public static float GetDolar()
-        {
-            return Saldo_Dolar;
-        }
-
-        public static string SaldoString()
-        {
-            string saldo = "R$ " + Saldo.ToString("0.00");
-            return saldo;
-        }
-
-        public static string DolarSaldoString()
-        {
-            string saldo = "$ " + Saldo_Dolar.ToString("0.00");
-            return saldo;
         }
     }
 }

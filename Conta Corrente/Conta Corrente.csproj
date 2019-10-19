@@ -102,6 +102,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="entities\SenhaController.cs" />
+    <Compile Include="entities\TransferController.cs" />
     <Compile Include="UI\ContaForm.cs">
       <SubType>Form</SubType>
     </Compile>
