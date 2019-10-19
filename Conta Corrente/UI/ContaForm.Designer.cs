@@ -39,9 +39,8 @@
             this.saldoLabelConta = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -122,7 +121,7 @@
             this.saldoLabelConta.ForeColor = System.Drawing.Color.ForestGreen;
             this.saldoLabelConta.Location = new System.Drawing.Point(59, 138);
             this.saldoLabelConta.Name = "saldoLabelConta";
-            this.saldoLabelConta.Size = new System.Drawing.Size(45, 22);
+            this.saldoLabelConta.Size = new System.Drawing.Size(179, 22);
             this.saldoLabelConta.TabIndex = 10;
             this.saldoLabelConta.Text = "label6";
             // 
@@ -145,14 +144,6 @@
             this.button2.Text = "Comprar Dólar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(0, 206);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(368, 2);
-            this.label6.TabIndex = 13;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(244, 167);
@@ -162,23 +153,23 @@
             this.button3.Text = "Pagar conta";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // exitButton
             // 
-            this.button4.Location = new System.Drawing.Point(244, 35);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 23);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Sair da conta";
-            this.button4.UseVisualStyleBackColor = true;
+            this.exitButton.Location = new System.Drawing.Point(244, 35);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(108, 23);
+            this.exitButton.TabIndex = 15;
+            this.exitButton.Text = "Sair da conta";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // ContaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 211);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.saldoLabelConta);
@@ -192,6 +183,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ContaForm";
             this.Text = "ContaForm";
+            this.Load += new System.EventHandler(this.ContaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,8 +202,7 @@
         private System.Windows.Forms.Label saldoLabelConta;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button exitButton;
     }
 }

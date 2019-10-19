@@ -47,5 +47,12 @@ namespace Conta_Corrente.entities
         {
             return Cpf;
         }
+
+        public static string SaldoString()
+        {
+            string saldo = "R$ " + Saldo.ToString("0.00");
+            Console.WriteLine(saldo);
+            return saldo;
+        }
     }
 }

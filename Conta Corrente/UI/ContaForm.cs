@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Conta_Corrente.entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +18,17 @@ namespace Conta_Corrente.UI
             InitializeComponent();
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void ContaForm_Load(object sender, EventArgs e)
         {
-
+            nomeLabelConta.Text = ContaController.NomeString();
+            cpfLabelConta.Text = ContaController.CpfString();
+            contaLabelConta.Text = ContaController.ContaString();
+            saldoLabelConta.Text = ContaController.SaldoString();
         }
 
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
