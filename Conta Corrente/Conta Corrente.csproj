@@ -122,6 +122,12 @@
     <Compile Include="UI\SenhaContaForm.Designer.cs">
       <DependentUpon>SenhaContaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TransferenciaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TransferenciaForm.Designer.cs">
+      <DependentUpon>TransferenciaForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\ContaForm.resx">
       <DependentUpon>ContaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +145,9 @@
     </Compile>
     <EmbeddedResource Include="UI\SenhaContaForm.resx">
       <DependentUpon>SenhaContaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TransferenciaForm.resx">
+      <DependentUpon>TransferenciaForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ContasDataSet.xsc">
       <DependentUpon>ContasDataSet.xsd</DependentUpon>

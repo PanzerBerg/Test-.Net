@@ -17,6 +17,7 @@ namespace Conta_Corrente.entities
         private static string Nome { get; set; }
         private static string Cpf { get; set; }
         private static float Saldo { get; set; }
+        private static float Saldo_Dolar { get; set; }
 
         public static void RecebeDados(int _id, string _nome, string _cpf, float _saldo)
         {
@@ -51,7 +52,12 @@ namespace Conta_Corrente.entities
         public static string SaldoString()
         {
             string saldo = "R$ " + Saldo.ToString("0.00");
-            Console.WriteLine(saldo);
+            return saldo;
+        }
+
+        public static string DolarSaldoString()
+        {
+            string saldo = "$ " + Saldo_Dolar.ToString("0.00");
             return saldo;
         }
     }

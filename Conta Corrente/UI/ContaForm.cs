@@ -24,11 +24,25 @@ namespace Conta_Corrente.UI
             cpfLabelConta.Text = ContaController.CpfString();
             contaLabelConta.Text = ContaController.ContaString();
             saldoLabelConta.Text = ContaController.SaldoString();
+            dolarLabelConta.Text = ContaController.DolarSaldoString();
+        }
+
+        private void TrocaFormTrans()
+        {
+            Program.Context.MainForm = new TransferenciaForm();
+            this.Close();
+            Program.Context.MainForm.Show();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void transContaButton_Click(object sender, EventArgs e)
+        {
+            TrocaFormTrans();
+        }
+
     }
 }

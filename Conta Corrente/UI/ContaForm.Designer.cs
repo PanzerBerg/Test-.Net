@@ -37,10 +37,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.saldoLabelConta = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.transContaButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.dolarLabelConta = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -125,15 +126,16 @@
             this.saldoLabelConta.TabIndex = 10;
             this.saldoLabelConta.Text = "label6";
             // 
-            // button1
+            // transContaButton
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(244, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Fazer transferencia";
-            this.button1.UseVisualStyleBackColor = true;
+            this.transContaButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.transContaButton.Location = new System.Drawing.Point(244, 109);
+            this.transContaButton.Name = "transContaButton";
+            this.transContaButton.Size = new System.Drawing.Size(108, 23);
+            this.transContaButton.TabIndex = 11;
+            this.transContaButton.Text = "Fazer transferencia";
+            this.transContaButton.UseVisualStyleBackColor = true;
+            this.transContaButton.Click += new System.EventHandler(this.transContaButton_Click);
             // 
             // button2
             // 
@@ -163,6 +165,17 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // dolarLabelConta
+            // 
+            this.dolarLabelConta.BackColor = System.Drawing.SystemColors.Control;
+            this.dolarLabelConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dolarLabelConta.ForeColor = System.Drawing.Color.ForestGreen;
+            this.dolarLabelConta.Location = new System.Drawing.Point(59, 167);
+            this.dolarLabelConta.Name = "dolarLabelConta";
+            this.dolarLabelConta.Size = new System.Drawing.Size(179, 22);
+            this.dolarLabelConta.TabIndex = 10;
+            this.dolarLabelConta.Text = "label6";
+            // 
             // ContaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,7 +184,8 @@
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.transContaButton);
+            this.Controls.Add(this.dolarLabelConta);
             this.Controls.Add(this.saldoLabelConta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -200,9 +214,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label saldoLabelConta;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button transContaButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label dolarLabelConta;
     }
 }

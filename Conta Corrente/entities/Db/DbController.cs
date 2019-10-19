@@ -19,7 +19,7 @@ namespace Conta_Corrente.entities.Db
             public string Nome { get; set; }
             public string Cpf { get; set; }
             public float Saldo { get; set; }
-
+            public float Saldo_Dolar { get; set; }
         }
 
         public class Clientes_Senhas
@@ -33,7 +33,7 @@ namespace Conta_Corrente.entities.Db
 
         public const string strDelete = "DELETE FROM Clientes WHERE id = @id";
         public const string strInsert = "INSERT INTO Clientes VALUES (@nome, @cpf, @conta, @agencia, @digito, @saldo)";
-        public const string strSelect = "SELECT id, nome, cpf, conta, agencia, digito, saldo FROM Clientes";
+        public const string strSelect = "SELECT id, nome, cpf, conta, agencia, digito, saldo, saldo_dolar FROM Clientes";
         public const string strSelectSenhas = "SELECT id, cpf, senha FROM Clientes_Senhas";
         public const string strUpdate = "UPDATE Clientes SET nome = @nome, cpf = @cpf, conta = @conta, agencia = @agencia, digito = @digito, saldo = @saldo, id = @id";
 
@@ -92,12 +92,12 @@ namespace Conta_Corrente.entities.Db
                             clientes.Agencia = int.Parse(sqlDataReader["agencia"].ToString());
                             clientes.Digito = int.Parse(sqlDataReader["digito"].ToString());
                             clientes.Saldo = int.Parse(sqlDataReader["saldo"].ToString());
+                            clientes.Saldo_Dolar = int.Parse(sqlDataReader["saldo_dolar"].ToString());
 
                             list.Add(clientes);
                         }
                         sqlDataReader.Close();
                     }
-
                     sqlConnection.Close();
                 }
 
