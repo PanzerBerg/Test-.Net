@@ -133,7 +133,7 @@
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(143, 45);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Antes de continuar, \r\nverifique se os dados\r\n estão corretos!";
+            this.label5.Text = "Antes de continuar, \r\nverifique se os dados\r\nestão corretos!";
             // 
             // SenhaContaForm
             // 

@@ -36,7 +36,7 @@ namespace Conta_Corrente.entities.Db
         public const string strInsertSenhas = "INSERT INTO Clientes_Senhas VALUES (@cpf, @senha)";
         public const string strSelect = "SELECT id, nome, cpf, conta, agencia, digito, saldo, saldo_dolar FROM Clientes";
         public const string strSelectSenhas = "SELECT id, cpf, senha FROM Clientes_Senhas";
-        public const string strUpdate = "UPDATE Clientes SET nome = @nome, cpf = @cpf, conta = @conta, agencia = @agencia, digito = @digito, saldo = @saldo WHERE id = @id";
+        public const string strUpdate = "UPDATE Clientes SET nome = @nome, cpf = @cpf, conta = @conta, agencia = @agencia, digito = @digito, saldo = @saldo, saldo_dolar = @saldo_dolar WHERE id = @id";
 
         public List<Clientes_Senhas> ConsultarSenha()
         {
@@ -92,8 +92,8 @@ namespace Conta_Corrente.entities.Db
                             clientes.Conta = int.Parse(sqlDataReader["conta"].ToString());
                             clientes.Agencia = int.Parse(sqlDataReader["agencia"].ToString());
                             clientes.Digito = int.Parse(sqlDataReader["digito"].ToString());
-                            clientes.Saldo = int.Parse(sqlDataReader["saldo"].ToString());
-                            clientes.Saldo_Dolar = int.Parse(sqlDataReader["saldo_dolar"].ToString());
+                            clientes.Saldo = float.Parse(sqlDataReader["saldo"].ToString());
+                            clientes.Saldo_Dolar = float.Parse(sqlDataReader["saldo_dolar"].ToString());
 
                             list.Add(clientes);
                         }

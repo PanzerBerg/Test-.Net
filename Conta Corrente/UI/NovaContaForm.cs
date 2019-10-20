@@ -2,12 +2,6 @@
 using Conta_Corrente.entities.Db;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Conta_Corrente.entities.Db.DbController;
 
@@ -18,6 +12,11 @@ namespace Conta_Corrente.UI
         public NovaContaForm()
         {
             InitializeComponent();
+        }
+
+        private void NovaContaForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void Alert(string message, string caption)

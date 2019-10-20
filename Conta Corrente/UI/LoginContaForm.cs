@@ -3,7 +3,6 @@ using Conta_Corrente.entities.Db;
 using Conta_Corrente.UI;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 using static Conta_Corrente.entities.Db.DbController;
 

@@ -54,6 +54,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.16.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.16\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -83,7 +86,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContasDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="entities\ApplicationManager.cs" />
     <Compile Include="entities\ContaController.cs" />
     <Compile Include="entities\Db\DbController.cs" />
     <Compile Include="entities\Db\Model1.Context.cs">
@@ -101,8 +103,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="entities\DolarCotacao.cs" />
     <Compile Include="entities\SenhaController.cs" />
     <Compile Include="entities\TransferController.cs" />
+    <Compile Include="entities\Html\WebController.cs" />
+    <Compile Include="UI\CompraDolarFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CompraDolarFrom.Designer.cs">
+      <DependentUpon>CompraDolarFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ContaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +145,9 @@
     <Compile Include="UI\TransferenciaForm.Designer.cs">
       <DependentUpon>TransferenciaForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\CompraDolarFrom.resx">
+      <DependentUpon>CompraDolarFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ContaForm.resx">
       <DependentUpon>ContaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,5 +246,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

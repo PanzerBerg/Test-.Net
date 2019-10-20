@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conta_Corrente.entities;
 using Conta_Corrente.entities.Db;
-using Conta_Corrente.UI;
 using static Conta_Corrente.entities.Db.DbController;
 
 namespace Conta_Corrente.UI

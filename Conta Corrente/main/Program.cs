@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Conta_Corrente.entities;
+using System;
 using System.Windows.Forms;
 
 namespace Conta_Corrente
@@ -16,6 +14,8 @@ namespace Conta_Corrente
         [STAThread]
         static void Main()
         {
+            WebController.StartCrawler();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

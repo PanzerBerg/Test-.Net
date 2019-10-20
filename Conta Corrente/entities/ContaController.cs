@@ -1,10 +1,4 @@
 ﻿using Conta_Corrente.entities.Db;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 
 namespace Conta_Corrente.entities
 {
@@ -38,6 +32,11 @@ namespace Conta_Corrente.entities
         public static void SaldoAtualizado(float _saldo)
         {
             Saldo = _saldo;
+        }
+
+        public static void SaldoDolAtualizado(float _saldo)
+        {
+            Saldo_Dolar = _saldo;
         }
 
         public static void AtualizarDb(DbController dbController)
