@@ -17,6 +17,7 @@ namespace Conta_Corrente.UI
         private void TransferenciaForm_Load(object sender, EventArgs e)
         {
             saldoLabelTrans.Text = ContaController.SaldoString();
+            saldoDolLabel.Text = ContaController.DolarSaldoString();
         }
 
         private bool PuxarDados()
@@ -74,19 +75,50 @@ namespace Conta_Corrente.UI
             AlertReturn(sucesso, caption);
         }
 
+        private void TransacaoDol()
+        {
+            DbController dbController = new DbController();
+
+            TransferController.TransferFirstDol(float.Parse(transTxtBox.Text));
+
+            ContaController.AtualizarDb(dbController);
+            TransferController.AtualizarDb(dbController);
+
+            string sucesso = "O valor de $" + transTxtBox.Text + " foi transferido com sucesso para " + TransferController.GetNome();
+            string caption = "Transferencia concluida com sucesso";
+            AlertReturn(sucesso, caption);
+        }
+
         private void transButton_Click(object sender, EventArgs e)
         {
             if (PuxarDados())
             {
                 if (transTxtBox.TextLength > 0) {
-                    if (float.Parse(transTxtBox.Text) > ContaController.GetSaldo())
+                    if (realRadio.Checked)
                     {
-                        string message = "Saldo insuficiente para completar a transação. Retornando a conta.";
-                        string caption = "Saldo insuficiente";
-                        AlertReturn(message, caption);
-                    } else
+                        if (float.Parse(transTxtBox.Text) > ContaController.GetSaldo())
+                        {
+                            string message = "Saldo insuficiente para completar a transação. Retornando a conta.";
+                            string caption = "Saldo insuficiente";
+                            AlertReturn(message, caption);
+                        }
+                        else
+                        {
+                            Transacao();
+                        }
+                    }
+                    else
                     {
-                        Transacao();
+                        if (float.Parse(transTxtBox.Text) > ContaController.GetDolar())
+                        {
+                            string message = "Saldo insuficiente para completar a transação. Retornando a conta.";
+                            string caption = "Saldo insuficiente";
+                            AlertReturn(message, caption);
+                        }
+                        else
+                        {
+                            TransacaoDol();
+                        }
                     }
                 }
                 else

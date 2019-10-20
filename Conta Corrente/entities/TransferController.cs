@@ -45,6 +45,21 @@ namespace Conta_Corrente.entities
             return saldoAtualizado;
         }
 
+        public static float TransferFirstDol(float valor)
+        {
+            float saldoAtualizado = ContaController.GetDolar() - valor;
+            ContaController.SaldoDolAtualizado(saldoAtualizado);
+            TransferSecondDol(valor);
+            return saldoAtualizado;
+        }
+
+        public static float TransferSecondDol(float valor)
+        {
+            float saldoAtualizado = Saldo_Dolar + valor;
+            Saldo_Dolar = saldoAtualizado;
+            return saldoAtualizado;
+        }
+
         public static void AtualizarDb(DbController dbController)
         {
             dbController.Atualizar(Id, Nome, Cpf, Conta, Agencia, Digito, Saldo, Saldo_Dolar);

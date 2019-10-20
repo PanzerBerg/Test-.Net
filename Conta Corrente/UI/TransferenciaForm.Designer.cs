@@ -41,6 +41,9 @@
             this.saldoLabelTrans = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.transTxtBox = new System.Windows.Forms.MaskedTextBox();
+            this.saldoDolLabel = new System.Windows.Forms.Label();
+            this.realRadio = new System.Windows.Forms.RadioButton();
+            this.dolRadio = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // digitoLabel
@@ -126,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 26);
+            this.label3.Location = new System.Drawing.Point(14, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 18;
@@ -137,9 +140,9 @@
             this.saldoLabelTrans.BackColor = System.Drawing.SystemColors.Control;
             this.saldoLabelTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saldoLabelTrans.ForeColor = System.Drawing.Color.ForestGreen;
-            this.saldoLabelTrans.Location = new System.Drawing.Point(64, 52);
+            this.saldoLabelTrans.Location = new System.Drawing.Point(13, 49);
             this.saldoLabelTrans.Name = "saldoLabelTrans";
-            this.saldoLabelTrans.Size = new System.Drawing.Size(179, 22);
+            this.saldoLabelTrans.Size = new System.Drawing.Size(133, 22);
             this.saldoLabelTrans.TabIndex = 19;
             this.saldoLabelTrans.Text = "label6";
             // 
@@ -159,13 +162,49 @@
             this.transTxtBox.Size = new System.Drawing.Size(124, 20);
             this.transTxtBox.TabIndex = 21;
             // 
+            // saldoDolLabel
+            // 
+            this.saldoDolLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.saldoDolLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saldoDolLabel.ForeColor = System.Drawing.Color.ForestGreen;
+            this.saldoDolLabel.Location = new System.Drawing.Point(204, 49);
+            this.saldoDolLabel.Name = "saldoDolLabel";
+            this.saldoDolLabel.Size = new System.Drawing.Size(133, 22);
+            this.saldoDolLabel.TabIndex = 19;
+            this.saldoDolLabel.Text = "label6";
+            // 
+            // realRadio
+            // 
+            this.realRadio.AutoSize = true;
+            this.realRadio.Checked = true;
+            this.realRadio.Location = new System.Drawing.Point(17, 167);
+            this.realRadio.Name = "realRadio";
+            this.realRadio.Size = new System.Drawing.Size(39, 17);
+            this.realRadio.TabIndex = 22;
+            this.realRadio.TabStop = true;
+            this.realRadio.Text = "R$";
+            this.realRadio.UseVisualStyleBackColor = true;
+            // 
+            // dolRadio
+            // 
+            this.dolRadio.AutoSize = true;
+            this.dolRadio.Location = new System.Drawing.Point(62, 167);
+            this.dolRadio.Name = "dolRadio";
+            this.dolRadio.Size = new System.Drawing.Size(31, 17);
+            this.dolRadio.TabIndex = 22;
+            this.dolRadio.Text = "$";
+            this.dolRadio.UseVisualStyleBackColor = true;
+            // 
             // TransferenciaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 211);
+            this.Controls.Add(this.dolRadio);
+            this.Controls.Add(this.realRadio);
             this.Controls.Add(this.transTxtBox);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.saldoDolLabel);
             this.Controls.Add(this.saldoLabelTrans);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,5 +240,8 @@
         private System.Windows.Forms.Label saldoLabelTrans;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox transTxtBox;
+        private System.Windows.Forms.Label saldoDolLabel;
+        private System.Windows.Forms.RadioButton realRadio;
+        private System.Windows.Forms.RadioButton dolRadio;
     }
 }
