@@ -177,6 +177,7 @@
             this.Controls.Add(this.digitoTxtBoxTrans);
             this.Controls.Add(this.agenciaTxtBoxTrans);
             this.Controls.Add(this.contaTxtBoxTrans);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "TransferenciaForm";
             this.Text = "TransferenciaForm";
             this.Load += new System.EventHandler(this.TransferenciaForm_Load);

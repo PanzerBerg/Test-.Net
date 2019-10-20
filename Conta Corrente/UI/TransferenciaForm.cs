@@ -82,22 +82,30 @@ namespace Conta_Corrente.UI
 
         private void transButton_Click(object sender, EventArgs e)
         {
-            if (PuxarDados() && transTxtBox.TextLength > 0)
+            if (PuxarDados())
             {
-                if(float.Parse(transTxtBox.Text) > ContaController.GetSaldo())
+                if (transTxtBox.TextLength > 0) {
+                    if (float.Parse(transTxtBox.Text) > ContaController.GetSaldo())
+                    {
+                        string message = "Saldo insuficiente para completar a transação. Retornando a conta.";
+                        string caption = "Saldo insuficiente";
+                        AlertReturn(message, caption);
+                    } else
+                    {
+                        Transacao();
+                    }
+                }
+                else
                 {
-                    string message = "Saldo insuficiente para completar a transação. Retornando a conta.";
-                    string caption = "Saldo insuficiente";
-                    AlertReturn(message, caption);
-                } else
-                {
-                    Transacao();
+                    string message = "Por favor, preencha todos os campos";
+                    string caption = "Campos vazios";
+                    Alert(message, caption);
                 }
             }
             else
             {
-                string message = "Por favor, preencha todos os campos";
-                string caption = "Campos vazios";
+                string message = "Conta inexistente, tente novamente";
+                string caption = "Conta inexistente";
                 Alert(message, caption);
             }
         }

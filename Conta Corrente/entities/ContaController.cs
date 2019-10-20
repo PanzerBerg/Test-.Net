@@ -70,6 +70,21 @@ namespace Conta_Corrente.entities
             return Saldo_Dolar;
         }
 
+        public static int GetConta()
+        {
+            return Conta;
+        }
+
+        public static int GetAgencia()
+        {
+            return Agencia;
+        }
+
+        public static int GetDigito()
+        {
+            return Digito;
+        }
+
         public static string SaldoString()
         {
             string saldo = "R$ " + Saldo.ToString("0.00");

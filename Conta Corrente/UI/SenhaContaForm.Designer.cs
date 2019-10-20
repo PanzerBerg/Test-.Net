@@ -150,6 +150,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.validarSenhaButton);
             this.Controls.Add(this.senhaTxtBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "SenhaContaForm";
             this.Text = "SenhaContaForm";
             this.Load += new System.EventHandler(this.SenhaContaForm_Load);
