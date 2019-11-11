@@ -58,7 +58,6 @@ namespace Conta_Corrente.UI
             {
                 TrocarForm();
             }
-
         }
 
         private void Transacao()
@@ -91,7 +90,15 @@ namespace Conta_Corrente.UI
 
         private void transButton_Click(object sender, EventArgs e)
         {
-            if (PuxarDados())
+            if (contaTxtBoxTrans.Text.Equals(String.Format("{0}", ContaController.GetConta())) 
+                && agenciaTxtBoxTrans.Text.Equals(String.Format("{0}", ContaController.GetAgencia()))
+                && digitoTxtBoxTrans.Text.Equals(String.Format("{0}", ContaController.GetDigito())))
+            {
+                String message = "Conta a ser transferida não pode ser igual a conta atual";
+                String caption = "Digite a conta corretamente";
+                Alert(message, caption);
+                
+            } else if (PuxarDados())
             {
                 if (transTxtBox.TextLength > 0) {
                     if (realRadio.Checked)

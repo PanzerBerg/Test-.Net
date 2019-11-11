@@ -218,6 +218,7 @@
             this.Controls.Add(this.contaTxtBoxTrans);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "TransferenciaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransferenciaForm";
             this.Load += new System.EventHandler(this.TransferenciaForm_Load);
             this.ResumeLayout(false);

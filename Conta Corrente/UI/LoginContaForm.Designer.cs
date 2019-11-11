@@ -195,6 +195,7 @@
             this.Controls.Add(this.contaTxtBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "LoginContaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acesse a conta";
             this.Load += new System.EventHandler(this.LoginContaForm_Load);
             this.ResumeLayout(false);

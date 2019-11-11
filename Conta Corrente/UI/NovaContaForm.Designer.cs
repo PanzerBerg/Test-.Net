@@ -302,6 +302,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "NovaContaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NovaContaForm";
             this.Load += new System.EventHandler(this.NovaContaForm_Load);
             this.ResumeLayout(false);

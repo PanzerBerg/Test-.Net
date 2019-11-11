@@ -193,6 +193,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CompraDolarFrom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompraDolarFrom";
             this.Load += new System.EventHandler(this.CompraDolarFrom_Load);
             this.ResumeLayout(false);
